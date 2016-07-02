@@ -68,12 +68,4 @@ public abstract class BaseHandler {
 
         return bos.toByteArray();
     }
-
-    //如果不借助这样一个中间方法，在BaseHandler中直接调用onSuccess，参数必须是byte数组。
-    //那么TextHandler中onSuccess参数又必须是String，无法利用多态实现调用子类的不同onSuccess方法
-    //onSuccess又是抽象方法，那么byte数组->String操作在handleOnSuccess中完成
-    //子类重写handleOnSuccess即可
-//    protected void handleOnSuccess(byte[] response) {
-//        onSuccess(response);
-//    }
 }

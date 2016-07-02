@@ -18,13 +18,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         final TextView tv = (TextView) findViewById(R.id.tv);
 
+
         new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
                     URL url = new URL("http://10.0.2.2/updata.json");
+
                     BepHttpUtils httpUtils = new BepHttpUtils(url);
-                    BaseHandler handler = new TextHandler() {
+                    httpUtils.get(new TextHandler() {
                         @Override
                         public void onStart(ContentHeaderField field) {
                             Log.d("MainActivity", field.getContentType());
@@ -43,15 +45,15 @@ public class MainActivity extends AppCompatActivity {
 
                         @Override
                         public void onSuccess(String responseText) {
-                                tv.setText(responseText);
+                            Log.d("MainActivity", responseText);
                         }
 
                         @Override
                         public void onFailure(String failInfo) {
 
                         }
-                    };
-                    httpUtils.get(handler);
+                    });
+
                 } catch (MalformedURLException e) {
                     e.printStackTrace();
                 }
