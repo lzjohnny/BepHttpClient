@@ -2,6 +2,7 @@ package cn.mcdev.bephttputils;
 
 /**
  * Created by ShiningForever on 2016/7/1.
+ *
  */
 public class ContentHeaderField {
     private int contentLength = -1;

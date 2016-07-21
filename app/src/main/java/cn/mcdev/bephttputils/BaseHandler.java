@@ -34,8 +34,8 @@ public abstract class BaseHandler {
                 //开始：响应实体类型和长度
                 onStart(field);
 
-//                InputStream is = new BufferedInputStream(conn.getInputStream());
-                InputStream is = conn.getInputStream();
+                InputStream is = new BufferedInputStream(conn.getInputStream());
+//                InputStream is = conn.getInputStream();
                 byte[] responseBytes = StreamToBytes(is);
 
                 //成功：传入byte数组

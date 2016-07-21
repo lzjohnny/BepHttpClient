@@ -51,9 +51,4 @@ public abstract class TextHandler extends BaseHandler {
 //        onSuccess(Integer.toString(response.length));
     }
 
-//    @Override
-//    protected void handleOnSuccess(byte[] response) {
-//        String responseText = response.toString();
-//        onSuccess(responseText);
-//    }
 }
