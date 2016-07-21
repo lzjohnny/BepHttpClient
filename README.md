@@ -17,7 +17,7 @@
 
  - BaseHandler的子类，在父类基础上封装了byte[]转String的方法。
 
-##使用示例：
+##使用示例：GET：
 
 ```java
 
@@ -49,4 +49,45 @@ httpUtils.get(new TextHandler() {
 	}
 });
 
+```
+
+##使用示例：POST：
+
+```java
+BepHttpUtils httpUtils = new BepHttpUtils(url);
+// 添加首部参数
+httpUtils.addHeaderParams("User-Agent", "Mozilla/5.0");
+httpUtils.addHeaderParams("Connection", "keep-alive");
+
+// 添加POST请求内容
+Map<String, String> map = new HashMap<String, String>();
+map.put("username", "admin");
+map.put("password", "admin");
+
+httpUtils.post(map, new TextHandler() {
+	@Override
+	public void onStart(ContentHeaderField field) {
+		Log.d("MainActivity", field.getContentType());
+		Log.d("MainActivity", Integer.toString(field.getContentLength()));
+	}
+	@Override
+	public void onProcess() {
+
+	}
+
+	@Override
+	public void onFinish() {
+
+	}
+
+	@Override
+	public void onSuccess(String responseText) {
+		Log.d("MainActivity", responseText);
+	}
+
+	@Override
+	public void onFailure(String failInfo) {
+		Log.d("Failure", failInfo);
+	}
+});
 ```
