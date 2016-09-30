@@ -7,12 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
-import cn.mcdev.bephttpclient.R;
+import cn.mcdev.library.AsyncBepHttpClient;
+import cn.mcdev.library.TextProcessor;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -59,7 +59,5 @@ public class MainActivity extends AppCompatActivity {
                 httpClient.post(postData, processor);
             }
         });
-
     }
-
 }
