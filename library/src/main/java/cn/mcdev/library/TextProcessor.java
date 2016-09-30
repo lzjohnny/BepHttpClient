@@ -1,15 +1,6 @@
-package cn.mcdev.bephttpclient;
+package cn.mcdev.library;
 
-import android.util.Log;
-import android.widget.BaseAdapter;
-
-import java.io.BufferedReader;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
 
 /**
  * Created by lzjohnny on 2016/6/22.

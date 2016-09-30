@@ -4,26 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="cn.mcdev.bephttputils.MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:id="@+id/textView" />
+    tools:context="cn.mcdev.bephttpclient.MainActivity">
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="GET"
-        android:id="@+id/button_get"
-        android:onClick="get"/>
+        android:id="@+id/button_get" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="POST"
-        android:id="@+id/button_post"
-        android:onClick="post"/>
+        android:id="@+id/button_post" />
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

@@ -1,6 +1,5 @@
-package cn.mcdev.bephttpclient;
+package cn.mcdev.library;
 
-import java.net.URL;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
